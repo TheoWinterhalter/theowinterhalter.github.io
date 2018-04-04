@@ -66,18 +66,21 @@ header a:hover {
 /*** MAIN ***/
 
 main {
-  margin: 0;
+  margin: auto;
   margin-top: 20pt;
   margin-bottom: 30pt;
   /* max-width: 900pt; */
   padding: 5pt 12pt 20pt 12pt;
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(250pt, 1fr));
 
   text-align: center;
   color: rgb(45, 45, 45);
 }
 
 main section {
-  display: inline-block;
+  /* display: inline-block; */
   margin-bottom: 30pt;
   background-color: rgb(255, 255, 255);
   border-radius: 2pt;
@@ -85,10 +88,10 @@ main section {
   padding: 0;
   box-shadow: 0 2px 2px rgba(52, 52, 52, 0.03);
   transition: all 1s;
-  width: 250pt;
+  /* width: 250pt; */
   vertical-align: top;
   overflow: hidden;
-  text-align: justify;
+  text-align: left;
 }
 
 main section:hover {
@@ -96,7 +99,8 @@ main section:hover {
 }
 
 main section.large {
-  width: 350pt;
+  /* width: 350pt; */
+  grid-column: 1 / 3;
 }
 
 main section h3 {
