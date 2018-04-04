@@ -33,7 +33,7 @@ a.href {
 /*** HEADER ***/
 
 header {
-  background: rgb(160, 79, 251); /* HEADER BACKGROUND */
+  background: rgb(67, 136, 254); /* HEADER BACKGROUND */
   padding-top: 70pt;
   padding-bottom: 20pt;
 }
@@ -55,11 +55,11 @@ header figure {
 
 /* This is a fail safe in case logo don't show up */
 header a {
-  color: rgb(79, 14, 153); /* LINK COLOUR */
+  color: rgb(50, 98, 181); /* LINK COLOUR */
 }
 
 header a:hover {
-  color: rgb(50, 9, 97);
+  color: rgb(46, 85, 154);
 }
 
 
@@ -100,7 +100,7 @@ main section.large {
 }
 
 main section h3 {
-  background-color: rgb(160, 79, 251); /* HEADER BACKGROUND */
+  background-color: rgb(67, 136, 254); /* HEADER BACKGROUND */
   color: white;
   padding: 10pt;
   text-align: center;
