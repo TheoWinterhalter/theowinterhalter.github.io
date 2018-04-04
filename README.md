@@ -1,3 +1,1 @@
-# theowinterhalter.github.io
-
-My personal web page.
+https://theowinterhalter.github.io/
