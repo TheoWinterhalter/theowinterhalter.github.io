@@ -78,6 +78,7 @@ main {
   display: grid;
   /* grid-template-columns: repeat(3, 1fr); */
   grid-template-columns: repeat(auto-fill, minmax(270pt, 1fr));
+  grid-gap: 15pt;
 
   text-align: center;
   color: rgb(45, 45, 45);
@@ -85,10 +86,10 @@ main {
 
 main section {
   /* display: inline-block; */
-  margin-bottom: 30pt;
+  /* margin-bottom: 30pt; */
   background-color: rgb(255, 255, 255);
   border-radius: 2pt;
-  margin: 10pt 5pt;
+  /* margin: 10pt 5pt; */
   padding: 0;
   box-shadow: 0 2px 2px rgba(52, 52, 52, 0.03);
   transition: all 1s;
@@ -105,11 +106,13 @@ main section:hover {
 main section.large {
   /* width: 350pt; */
   /* grid-column: 2 / 4; */
-  grid-column-end: span 2;
+  /* grid-column-end: span 2; */
+  grid-column: auto / span 2;
 }
 
 main section.tall {
-  grid-row-end: span 2;
+  grid-row: auto / span 2;
+  /* grid-column-end: 1 / 3; */
 }
 
 main section h3 {
@@ -169,4 +172,11 @@ div.files a:hover {
 
 span.speaker {
   text-decoration: underline;
+}
+
+
+@media (max-width: 855pt) {
+  main section.large {
+    grid-column: auto / span 1;
+  }
 }
