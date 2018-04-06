@@ -166,3 +166,7 @@ div.files a:hover {
   background: #95bcda;
   box-shadow: 0 2px 1px rgba(52, 52, 52, 0.08);
 }
+
+span.speaker {
+  text-decoration: underline;
+}
