@@ -1,5 +1,5 @@
 :root {
-  --bgcol: rgb(67, 136, 254);
+  --bgcol: rgb(65, 120, 214);
 }
 
 /*** GENERAL ***/
@@ -17,7 +17,8 @@ body {
   /* font-family: "Open Sans", sans-serif; */
   font-family: sans-serif;
   /*background-color: rgb(241, 237, 237);*/
-  background-color: rgb(249, 247, 247);
+  /* background-color: rgb(249, 247, 247); */
+  background: #e7f1f5;
 }
 
 a {
@@ -59,11 +60,11 @@ header figure {
 
 /* This is a fail safe in case logo don't show up */
 header a {
-  color: rgb(50, 98, 181); /* LINK COLOUR */
+  color: rgb(102, 179, 241); /* LINK COLOUR */
 }
 
 header a:hover {
-  color: rgb(46, 85, 154);
+  color: rgb(154, 203, 242);
 }
 
 
@@ -111,7 +112,7 @@ main section.large {
 }
 
 main section.tall {
-  grid-row: auto / span 2;
+  grid-row: auto / span 2; 
   /* grid-column-end: 1 / 3; */
 }
 
@@ -131,7 +132,8 @@ main section h5 {
 main section p {
   margin: 12pt;
   font-weight: normal;
-  text-align: justify;
+  /* text-align: justify; */
+  text-align: left;
 }
 
 main section article {
