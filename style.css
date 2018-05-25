@@ -173,13 +173,13 @@ span.speaker {
   text-decoration: underline;
 }
 
-@media (min-width: 700pt) {
+@media (min-width: 30em) {
   main {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 900pt) {
+@media (min-width: 60em) {
   main {
     grid-template-columns: repeat(3, 1fr);
   }
