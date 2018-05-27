@@ -177,6 +177,10 @@ span.speaker {
   main {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  main section.tall {
+    grid-row: auto / span 3;
+  }
 }
 
 @media only screen and (min-width: 65em) {
