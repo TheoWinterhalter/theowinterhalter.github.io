@@ -190,6 +190,12 @@ span.speaker {
   text-decoration: underline;
 }
 
+span.submitted {
+  border-radius: 1em;
+  background: #ffae44;
+  padding: 0 3pt;
+}
+
 @media only screen and (min-width: 45em) {
   main {
     grid-template-columns: repeat(2, 1fr);
