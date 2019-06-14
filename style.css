@@ -191,9 +191,10 @@ span.speaker {
 }
 
 span.submitted {
-  border-radius: 1em;
+  border-radius: 0.1em;
   background: #ffae44;
-  padding: 0 3pt;
+  padding: 0.2em 0.3em;
+  color:rgb(101, 101, 101);
 }
 
 @media only screen and (min-width: 45em) {
