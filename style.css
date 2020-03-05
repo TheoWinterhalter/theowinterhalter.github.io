@@ -193,14 +193,14 @@ span.speaker {
 span.submitted {
   border-radius: 0.1em;
   background: #ffae44;
-  padding: 0.2em 0.3em;
+  padding: 0.03em 0.3em;
   color:rgb(101, 101, 101);
 }
 
 span.cancelled {
   border-radius: 0.1em;
   background: #ff4567;
-  padding: 0.2em 0.3em;
+  padding: 0.03em 0.3em;
   color:rgb(101, 101, 101);
 }
 
