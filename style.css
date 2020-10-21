@@ -86,6 +86,7 @@ main {
   grid-template-columns: 1fr;
   grid-template-areas:
     "me"
+    "ph"
     "pb"
     "tk"
     "pj";
@@ -116,6 +117,10 @@ main section:hover {
 
 main section.myself {
   grid-area: me;
+}
+
+main section.phd-thesis {
+  grid-area: ph;
 }
 
 main section.publications {
@@ -208,6 +213,7 @@ span.cancelled {
   main {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
+      "me ph"
       "me pb"
       "me tk"
       "me pj";
@@ -218,6 +224,7 @@ span.cancelled {
   main {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
+      "me ph ph"
       "me pb pb"
       "me tk pj";
   }

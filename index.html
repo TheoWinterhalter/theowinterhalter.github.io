@@ -12,24 +12,28 @@
   <body>
     <header>
       <h1>Théo Winterhalter</h1>
-      <h2>PhD Student within the team <a href="http://gallinette.inria.fr/">Gallinette</a></h2>
+      <h2>Postdoc at the <a href="https://www.mpi-sp.org/">MPI for Security and Privacy</a> in Bochum</h2>
     </header>
     <main>
       <section class="myself">
         <h3>Myself</h3>
         <p>
-          I am currently a PhD student of <a href="http://tabareau.fr/">Nicolas
-          Tabareau</a> and <a href="https://www.irif.fr/~sozeau/">Matthieu
-          Sozeau</a> within the Inria team
-          <a href="http://gallinette.inria.fr/">Gallinette</a> at LS2N in
-          Nantes. Before, I was a computer science student at ENS Cachan and
-          graduated for the MPRI (Parisian Master in Computer Science).
+          I am currently a postdoc at the <a href="https://www.mpi-sp.org/">MPI
+          for Security and Privacy</a> in Bochum, working with
+          <a href="https://prosecco.gforge.inria.fr/personal/hritcu/">Cătălin
+          Hrițcu</a>.
+          Previously, I was a PhD student of
+          <a href="http://tabareau.fr/">Nicolas Tabareau</a> and
+          <a href="https://www.irif.fr/~sozeau/">Matthieu Sozeau</a> within the
+          Inria team <a href="http://gallinette.inria.fr/">Gallinette</a> at
+          LS2N in Nantes. Before, I was a computer science student at ENS Cachan
+          and graduated from the MPRI (Parisian Master in Computer Science).
         </p>
         <p>
           My research interests mainly lie in Type Theory and Proof Theory.
         </p>
         <p>
-          You can contact me at <code>firstname.lastname@inria.fr</code>.
+          You can contact me at <code>firstname.lastname@csp.mpg.de</code>.
         </p>
 
         <h5>Experience</h5>
@@ -64,8 +68,64 @@
           <p class="yearspan">June 2014 — July 2014</p>
         </article>
       </section>
+      <section class="phd-thesis">
+        <h3>PhD thesis</h3>
+        <article>
+          <h4>
+            <a href="https://hal.archives-ouvertes.fr/hal-02901011v2">
+              Formalisation and Meta-Theory of Type Theory
+            </a>
+            <p>
+              In this thesis, I talk about the meta-theory of type theory and
+              about how to formalise it in a proof assistant.
+            </p>
+            <p>
+              I first focus on a conservative translation between extensional
+              type theory and either intensional or weak type theory, entirely
+              written in Coq. The first translation consists in a removal of the
+              reflection of equality rule, whereas the second translation
+              produces something stronger: weak type theory is a type theory
+              with no notion of conversion. The conservativity result implies
+              that conversion doesn't increase the logical power of type
+              theories.
+            </p>
+            <p>
+              Then, I show my work for the MetaCoq project of formalising and
+              specifying Coq within Coq. In particular I worked on writing a
+              type-checker for Coq, in Coq. This type checker is proven sound
+              with respect to the specification and can be extracted to OCaml
+              code and run independently of Coq's kernel type-checker. For this
+              to work we have to rely on the meta-theory of Coq which we
+              develop, in part, in the MetaCoq project. However, because of
+              Gödel's incompleteness theorems, we cannot prove consistency of
+              Coq within Coq, and this means that some properties—mainly
+              strong normalisation—have to be assumed, i.e. taken as axioms.
+            </p>
+            <p class="conference">Defended on 18 Sept 2020</p>
+            <div class="files">
+              <a href="https://github.com/TheoWinterhalter/phd-thesis/releases/download/v1.2.1/TheoWinterhalter-PhD-v1.2.1.pdf">PDF</a>
+              <a href="https://github.com/TheoWinterhalter/phd-thesis">LaTeX</a>
+              <!-- <a href="">Bibtex</a> -->
+              <a href="https://www.youtube.com/watch?v=sEr7sz1sOAk">Defence video</a>
+            </div>
+          </h4>
+        </article>
+      </section>
       <section class="publications">
         <h3>Research articles</h3>
+        <article>
+          <h4>
+            <a href="https://hal.archives-ouvertes.fr/hal-02901011v2">
+              The Taming of the Rew: A Type Theory with Computational Assumptions
+            </a>
+            <p>Jesper Cockx, Nicolas Tabareau, Théo Winterhalter (2021)</p>
+            <p class="conference">POPL</p>
+            <div class="files">
+              <a href="https://hal.archives-ouvertes.fr/hal-02901011/file/main_popl.pdf">PDF</a>
+              <a href="https://hal.archives-ouvertes.fr/hal-02901011v2/bibtex">Bibtex</a>
+            </div>
+          </h4>
+        </article>
         <article>
           <h4>
             <a href="https://hal.archives-ouvertes.fr/hal-02380196v2">
