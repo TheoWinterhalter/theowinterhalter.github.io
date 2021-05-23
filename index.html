@@ -12,340 +12,133 @@
 
   <body>
     <header>
-      <h1>Théo Winterhalter</h1>
-      <h2>Postdoc at the <a href="https://www.mpi-sp.org/">Max Planck Institute for Security and Privacy (MPI-SP)</a> in Bochum</h2>
+      <img src="res/profile.jpg" alt="Théo Winterhalter's photo">
+      <p>
+        My name is <span class="name">Théo Winterhalter</span> and I am a
+        <span class="job">postdoctoral researcher</span> at
+        <a href="https://www.mpi-sp.org/"> Max Planck Institute for Security and
+        Privacy (MPI-SP)</a> in Bochum (Germany).
+        My main interest lies in <span class="keyword">type theory</span> and
+        its applications to <span class="keyword">proof assistants</span>.
+        As such, most of my results are <span class="keyword">formalised</span>
+        in a proof assistant, generally <a href="https://coq.inria.fr">Coq</a>.
+        I strive to make proof assistants better and safer.
+      </p>
     </header>
+    <nav>
+      <a href="#">Projects</a>
+      <a href="#">PhD thesis</a>
+      <a href="#">Publications</a>
+      <a href="#">Experience</a>
+      <a href="#">Github</a>
+    </nav>
     <main>
-      <section class="myself">
-        <h3>Myself</h3>
-        <p>
-          I am currently a postdoc at the <a href="https://www.mpi-sp.org/">Max
-          Planck Institute for Security and Privacy (MPI-SP)</a> in Bochum,
-          working with
-          <a href="https://prosecco.gforge.inria.fr/personal/hritcu/">Cătălin
-          Hrițcu</a>.
-          Previously, I was a PhD student of
-          <a href="http://tabareau.fr/">Nicolas Tabareau</a> and
-          <a href="https://www.irif.fr/~sozeau/">Matthieu Sozeau</a> within the
-          Inria team <a href="http://gallinette.inria.fr/">Gallinette</a> at
-          LS2N in Nantes. Before, I was a computer science student at ENS Cachan
-          and graduated from the MPRI (Parisian Master in Computer Science).
-        </p>
-        <p>
-          My research interests mainly lie in Type Theory and Proof Theory.
-        </p>
-        <p>
-          You can contact me at <code>firstname.lastname@mpi-sp.org</code>.
-        </p>
-
-        <h5>Experience</h5>
-        <article>
-          <h4>Member of the Artifact Evaluation Committee of ICFP18</h4>
-        </article>
-
-        <h5>Internships</h5>
-        <article>
-          <h4>On Extensional Type Theory</h4>
-          <p>with Matthieu Sozeau, at IRIF (Paris 7)</p>
-          <p class="yearspan">April 2017 — July 2017</p>
-        </article>
-        <article>
-          <h4>On ETT and formalisation of Type Theory</h4>
-          <p>with Andrej Bauer at University of Ljubljana</p>
-          <p class="yearspan">October 2016 — March 2017</p>
-        </article>
-        <article>
-          <h4>On Resizing Rules and ETT</h4>
-          <p>with Nicolas Tabareau at IMT Atlantique</p>
-          <p class="yearspan">March 2016 — July 2016</p>
-        </article>
-        <article>
-          <h4>On Sized Types</h4>
-          <p>with Andreas Abel at Chalmers / Gothenburg University</p>
-          <p class="yearspan">March 2015 — July 2015</p>
-        </article>
-        <article>
-          <h4>On covering systems of congruence to defeat side-channel attacks</h4>
-          <p>with Laurent Imbert and Eleonora Guerrini at LIRMM</p>
-          <p class="yearspan">June 2014 — July 2014</p>
-        </article>
-      </section>
-      <section class="phd-thesis">
-        <h3>PhD thesis</h3>
-        <article>
-          <h4>
-              Formalisation and Meta-Theory of Type Theory
-            <p>
-              In this thesis, I talk about the meta-theory of type theory and
-              about how to formalise it in a proof assistant.
+      <section>
+        <h1>Big projects I have been working on</h1>
+        <div class="main">
+          <article>
+            <img src="res/ssprove-logo-transparent.png" alt="SSProve logo">
+            <p class="main">
+              <span class="name">SSProve</span> is a framework combining
+              high-level modular proofs about composed cryptography protocols
+              with a probabilistic relational program logic to treat lower-level
+              details. All of it is formalised in Coq.
             </p>
-            <p>
-              I first focus on a conservative translation between extensional
-              type theory and either intensional or weak type theory, entirely
-              written in Coq. The first translation consists in a removal of the
-              reflection of equality rule, whereas the second translation
-              produces something stronger: weak type theory is a type theory
-              with no notion of conversion. The conservativity result implies
-              that conversion doesn't increase the logical power of type
-              theories.
+            <p class="main">
+              As a stress-test, we formalised in SSProve a security theorem for
+              KEM-DEM. This proof follows the original
+              <a href="https://eprint.iacr.org/2018/306">SSP paper</a> by
+              Brzuska et al. Thanks to our formalisation effort, and in
+              collaboration with the authors, we found a bug in their original
+              theorem. This has led them to update their proof, which we then
+              formalised in full in SSProve.
             </p>
-            <p>
-              Then, I show my work for the MetaCoq project of formalising and
-              specifying Coq within Coq. In particular I worked on writing a
-              type-checker for Coq, in Coq. This type checker is proven sound
-              with respect to the specification and can be extracted to OCaml
-              code and run independently of Coq's kernel type-checker. For this
-              to work we have to rely on the meta-theory of Coq which we
-              develop, in part, in the MetaCoq project. However, because of
-              Gödel's incompleteness theorems, we cannot prove consistency of
-              Coq within Coq, and this means that some properties—mainly
-              strong normalisation—have to be assumed, i.e. taken as axioms.
+            <a class="full" href="https://github.com/SSProve/ssprove">
+              See on Github
+            </a>
+            <div class="paper">
+              <h4>
+                <a href="https://eprint.iacr.org/2021/397">
+                  SSProve: A Foundational Framework for Modular Cryptographic Proofs in Coq
+                </a>
+                <p>
+                  with Carmine Abate, Philipp G. Haselwarter, Exequiel Rivas,
+                  Antoine Van Muylder, Catalin Hritcu, Kenji Maillard and
+                  Bas Spitters
+                </p>
+                <p class="conference">CSF (2021)</p>
+                <div class="files">
+                  <a href="https://eprint.iacr.org/2021/397.pdf">PDF</a>
+                  <a href="https://eprint.iacr.org/eprint-bin/cite.pl?entry=2021/397">Bibtex</a>
+                </div>
+              </h4>
+            </div>
+          </article>
+          <article>
+            <img src="res/metacoq-logo.png" alt="MetaCoq logo">
+            <p class="main">
+              <span class="name">MetaCoq</span> provides meta-programming
+              facilities to the Coq proof assistant.
+              MetaCoq contains a formal specification of Coq, including its
+              meta-theory. We then prove most of the meta-theoretic results
+              expected of it, and, assuming strong normalisation, we derive
+              a type-checker for Coq, verified in Coq.
             </p>
-            <p class="conference">Defended on 18 Sept 2020</p>
-            <div class="files">
-              <a href="https://github.com/TheoWinterhalter/phd-thesis/releases/download/v1.2.1/TheoWinterhalter-PhD-v1.2.1.pdf">PDF</a>
-              <a href="https://github.com/TheoWinterhalter/phd-thesis">LaTeX</a>
-              <!-- <a href="">Bibtex</a> -->
-              <a href="https://www.youtube.com/watch?v=sEr7sz1sOAk">Defence video</a>
+            <a class="full" href="https://github.com/MetaCoq/metacoq">
+              See on Github
+            </a>
+            <a class="full" href="https://metacoq.github.io/">
+              Official website
+            </a>
+            <div class="paper">
+              <h4>
+                <a href="https://hal.archives-ouvertes.fr/hal-02380196v2">
+                  Coq Coq Correct! Verification of Type Checking and Erasure for Coq, in Coq
+                </a>
+                <p>
+                  with Matthieu Sozeau, Simon Boulier, Yannick Forster and
+                  Nicolas Tabareau
+                </p>
+                <p class="conference">POPL (2020)</p>
+                <div class="files">
+                  <a href="https://hal.archives-ouvertes.fr/hal-02380196/file/popl20main-p34-p-79d1b9f-43140-final.pdf">PDF</a>
+                  <a href="https://hal.archives-ouvertes.fr/hal-02380196v2/bibtex">Bibtex</a>
+                  <a href="https://youtu.be/djQBwHMeywI">Video</a>
+                  <a href="res/POPL20-coq-coq-correct.pdf">Slides</a>
+                </div>
+              </h4>
             </div>
-          </h4>
-        </article>
+            <div class="paper">
+              <h4>
+                <a href="https://hal.inria.fr/hal-02167423">
+                  The MetaCoq Project
+                </a>
+                <p>
+                  with Matthieu Sozeau, Abhishek Anand, Simon Boulier,
+                  Cyril Cohen, Yannick Forster, Fabian Kunze, Gregory Malecha,
+                  and Nicolas Tabareau</p>
+                <p class="conference">JAR (2020)</p>
+                <div class="files">
+                  <a href="https://hal.inria.fr/hal-02167423/file/The_MetaCoq_Project.pdf">PDF</a>
+                  <a href="https://hal.inria.fr/hal-02167423/bibtex">Bibtex</a>
+                </div>
+              </h4>
+            </div>
+          </article>
+        </div>
       </section>
-      <section class="publications">
-        <h3>Research articles</h3>
-        <article>
-          <h4>
-            <span class="submitted">Submitted</span>
-            <a href="https://eprint.iacr.org/2021/397">
-              SSProve: A Foundational Framework for Modular Cryptographic Proofs in Coq
-            </a>
-            <p>Carmine Abate and Philipp G. Haselwarter and Exequiel Rivas and Antoine Van Muylder and Théo Winterhalter and Catalin Hritcu and Kenji Maillard and Bas Spitters (2021)</p>
-            <p class="conference">—</p>
-            <div class="files">
-              <a href="https://eprint.iacr.org/2021/397.pdf">PDF</a>
-              <a href="https://eprint.iacr.org/eprint-bin/cite.pl?entry=2021/397">Bibtex</a>
-            </div>
-          </h4>
-        </article>
-        <article>
-          <h4>
-            <a href="https://hal.archives-ouvertes.fr/hal-02901011v2">
-              The Taming of the Rew: A Type Theory with Computational Assumptions
-            </a>
-            <p>Jesper Cockx, Nicolas Tabareau, Théo Winterhalter (2021)</p>
-            <p class="conference">POPL</p>
-            <div class="files">
-              <a href="https://hal.archives-ouvertes.fr/hal-02901011/file/main_popl.pdf">PDF</a>
-              <a href="https://hal.archives-ouvertes.fr/hal-02901011v2/bibtex">Bibtex</a>
-            </div>
-          </h4>
-        </article>
-        <article>
-          <h4>
-            <a href="https://hal.archives-ouvertes.fr/hal-02380196v2">
-              Coq Coq Correct! Verification of Type Checking and Erasure for Coq, in Coq
-            </a>
-            <p>Matthieu Sozeau, Simon Boulier, Yannick Forster, Nicolas Tabareau, Théo Winterhalter (2020)</p>
-            <p class="conference">POPL</p>
-            <div class="files">
-              <a href="https://hal.archives-ouvertes.fr/hal-02380196/file/popl20main-p34-p-79d1b9f-43140-final.pdf">PDF</a>
-              <a href="https://hal.archives-ouvertes.fr/hal-02380196v2/bibtex">Bibtex</a>
-              <a href="https://youtu.be/djQBwHMeywI">Video</a>
-              <a href="res/POPL20-coq-coq-correct.pdf">Slides</a>
-            </div>
-          </h4>
-        </article>
-        <article>
-          <h4>
-            <!-- <span class="submitted">Under review</span> -->
-            <a href="https://hal.inria.fr/hal-02167423">
-              The MetaCoq Project
-            </a>
-            <p>Matthieu Sozeau, Abhishek Anand, Simon Boulier, Cyril Cohen, Yannick Forster, Fabian Kunze, Gregory Malecha, Nicolas Tabareau and Théo Winterhalter (2020)</p>
-            <p class="conference">JAR</p>
-            <div class="files">
-              <a href="https://hal.inria.fr/hal-02167423/file/The_MetaCoq_Project.pdf">PDF</a>
-              <a href="https://hal.inria.fr/hal-02167423/bibtex">Bibtex</a>
-            </div>
-          </h4>
-        </article>
-        <article>
-          <h4>
-            <a href="https://hal.archives-ouvertes.fr/hal-01849166v3">
-              Eliminating Reflection from Type Theory
-            </a>
-            <p>Théo Winterhalter, Matthieu Sozeau, Nicolas Tabareau (2019)</p>
-            <p class="conference">CPP</p>
-            <div class="files">
-              <a href="https://hal.archives-ouvertes.fr/hal-01849166/file/cpp19.pdf">PDF</a>
-              <a href="https://hal.archives-ouvertes.fr/hal-01849166v3/bibtex">Bibtex</a>
-              <a href="res/cpp19.pdf">Slides</a>
-            </div>
-          </h4>
-        </article>
-        <article>
-          <h4>
-            <a href="https://hal.archives-ouvertes.fr/hal-01596179">
-              Normalization by evaluation for sized dependent types
-            </a>
-            <p>Andreas Abel, Andrea Vezzosi, Théo Winterhalter (2017)</p>
-            <p class="conference">ICFP</p>
-            <div class="files">
-              <a href="https://hal.archives-ouvertes.fr/hal-01596179/file/icfp17-main84.pdf">PDF</a>
-              <a href="https://hal.archives-ouvertes.fr/hal-01596179/bibtex">Bibtex</a>
-            </div>
-          </h4>
-        </article>
-        <article>
-          <h4>
-            <a href="https://hal-lirmm.ccsd.cnrs.fr/lirmm-01587488v2">
-              Randomized Mixed-Radix Scalar Multiplication
-            </a>
-            <p>Eleonora Guerrini, Laurent Imbert, Théo Winterhalter (2017)</p>
-            <p class="conference">IEEE Transactions on Computers</p>
-            <div class="files">
-              <a href="https://hal-lirmm.ccsd.cnrs.fr/lirmm-01587488v2/document">PDF</a>
-              <a href="https://hal-lirmm.ccsd.cnrs.fr/lirmm-01587488v2/bibtex">Bibtex</a>
-            </div>
-          </h4>
-        </article>
+      <section>
+        <h1>My Ph.D thesis</h1>
+        <div class="main"></div>
       </section>
-      <section class="talks">
-        <h3>Talks</h3>
-        <article>
-          <h4>
-            <span class="cancelled">Cancelled</span>
-            <a href="https://types2020.di.unito.it/abstracts/BookOfAbstractsTYPES2020.pdf">
-              Modular Confluence for Rewrite Rules in MetaCoq
-            </a>
-            <p>Jesper Cockx, Nicolas Tabareau and Théo Winterhalter</p>
-            <p class="conference">TYPES 2020</p>
-          </h4>
-        </article>
-        <article>
-          <h4>
-            <a href="http://www.ii.uib.no/~bezem/abstracts/TYPES_2019_paper_18">
-              Weak Type Theory is Rather Strong
-            </a>
-            <p><span class="speaker">Théo Winterhalter</span> and Simon Boulier</p>
-            <p class="conference">TYPES 2019</p>
-          </h4>
-          <div class="files">
-            <a href="res/types19.pdf">Slides (PDF)</a>
-          </div>
-        </article>
-        <article>
-          <h4>
-            <a href="http://www.ii.uib.no/~bezem/abstracts/TYPES_2019_paper_22">
-              How to Tame your Rewrite Rules
-            </a>
-            <p><span class="speaker">Jesper Cockx</span>, Nicolas Tabareau and Théo Winterhalter</p>
-            <p class="conference">TYPES 2019</p>
-          </h4>
-        </article>
-        <article>
-          <h4>
-            <a href="http://cs.au.dk/research/logic-and-semantics/eutypes2018/abstracts/">
-              Using reflection to eliminate reflection
-            </a>
-            <p><span class="speaker">Théo Winterhalter</span>, Matthieu Sozeau and Nicolas Tabareau</p>
-            <p class="conference">EUTypes Aarhus</p>
-          </h4>
-          <div class="files">
-            <a href="http://cs.au.dk/fileadmin/user_upload/Winterhalter-EUTypes-Aarhus.pdf">Slides (PDF)</a>
-          </div>
-        </article>
-        <article>
-          <h4>
-            <a href="https://types2018.projj.eu/accepted-papers/">
-              Using reflection to eliminate reflection
-            </a>
-            <p><span class="speaker">Théo Winterhalter</span>, Matthieu Sozeau and Nicolas Tabareau</p>
-            <p class="conference">TYPES 2018</p>
-            <div class="files">
-              <a href="res/typeAs18.pdf">Slides (PDF)</a>
-            </div>
-          </h4>
-        </article>
-        <article>
-          <h4>
-            <a href="http://types2017.elte.hu/proc.pdf#page=39">
-              A modular formalization of type theory in Coq
-            </a>
-            <p><span class="speaker">Andrej Bauer</span>, Philipp G. Haselwarter and Théo Winterhalter</p>
-            <p class="conference">TYPES 2017</p>
-          </h4>
-        </article>
-        <article>
-          <h4>
-            <a href="http://types2017.elte.hu/proc.pdf#page=12">
-              Normalization by Evaluation for Sized Dependent Types
-            </a>
-            <p><span class="speaker">Andreas Abel</span>, Andrea Vezzosi and Théo Winterhalter</p>
-            <p class="conference">TYPES 2017</p>
-          </h4>
-        </article>
-        <article>
-          <h4>
-            <a href="https://eutypes.cs.ru.nl/Meetings/Ljubljana17participants">
-              The rules of type theory
-            </a>
-            <p><span class="speaker">Théo Winterhalter</span>, Andrej Bauer, Philipp Haselwarter</p>
-            <p class="conference"> Workshop on Syntax and Semantics of Type Theory, Ljubljana (2017)</p>
-          </h4>
-        </article>
-        <article>
-          <h4>
-            <a href="http://www.types2016.uns.ac.rs/images/abstracts/abel2.pdf">
-              An Extension of Martin-Löf Type Theory with Sized Types
-            </a>
-            <p><span class="speaker">Théo Winterhalter</span> and Andreas Abel</p>
-            <p class="conference">TYPES 2016</p>
-          </h4>
-        </article>
+      <section>
+        <h1>Publications and talks</h1>
+        <h2>I only include peer-reviewed proceedings and conferences.</h2>
+        <div class="main"></div>
       </section>
-      <section class="projects">
-        <h3>Projects</h3>
-        <article>
-          <h4>
-            <a href="https://github.com/TheoWinterhalter/ett-to-itt">
-              ett-to-itt
-            </a>
-            <p>Formalisation of a translation from ETT to ITT</p>
-          </h4>
-        </article>
-        <article>
-          <h4>
-            <a href="https://github.com/MetaCoq/metacoq">
-              MetaCoq
-            </a>
-            <p>Metaprogramming in Coq (my contributions are mainly focused on soundness of a type checker for Coq itself)</p>
-          </h4>
-        </article>
-        <article>
-          <h4>
-            <a href="https://github.com/TheoWinterhalter/formal-type-theory">
-              formal-type-theory
-            </a>
-            <p>Modular formalisation of type theory (rather old)</p>
-          </h4>
-        </article>
-        <article>
-          <h4>
-            <a href="https://github.com/ogaml/ogaml">
-              ogaml
-            </a>
-            <p>Ocaml graphics and multimedia library</p>
-          </h4>
-        </article>
-        <article>
-          <h4>
-            <a href="https://github.com/docaml/docaml">
-              docaml
-            </a>
-            <p>Automatic documentation generation for ocaml</p>
-          </h4>
-        </article>
+      <section>
+        <h1>Experience and education</h1>
+        <div class="main"></div>
       </section>
     </main>
   </body>
