@@ -57,6 +57,7 @@ div.paper {
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 4px;
+  margin-top: 0.2em;
 }
 
 div.paper p {
@@ -137,6 +138,7 @@ nav a {
   font-size: x-large;
   color: var(--navlink);
   border-bottom: 3px solid transparent;
+  margin: 0 0.2em;
 }
 
 nav a:hover {
@@ -169,11 +171,16 @@ section h2 {
   font-size: large;
 }
 
+section h2.big {
+  font-size: xx-large;
+  margin-top: 30px;
+}
+
 section div.main {
   max-width: 1200px;
   width: auto;
   margin: auto;
-  margin-top: 60px;
+  margin-top: 50px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -187,7 +194,8 @@ section article {
   flex-wrap: wrap;
   flex: 1;
   align-items: center;
-  margin: 10px;
+  margin: 20px;
+  text-align: justify;
 }
 
 section article img {
@@ -213,6 +221,7 @@ section article a.full {
   color: rgb(136, 136, 136);
   transition: all 1s;
   margin-bottom: 4px;
+  margin-top: 0.2em;
 }
 
 section article a.full:hover {
