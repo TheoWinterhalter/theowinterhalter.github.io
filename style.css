@@ -52,6 +52,20 @@ img {
   color: rgb(27, 161, 150);
 }
 
+span.submitted {
+  border-radius: 0.1em;
+  background: #ffae44;
+  padding: 0.03em 0.3em;
+  color:rgb(101, 101, 101);
+}
+
+span.cancelled {
+  border-radius: 0.1em;
+  background: #ff4567;
+  padding: 0.03em 0.3em;
+  color: rgb(236, 236, 236);
+}
+
 div.paper {
   background-color: rgb(243, 240, 240);
   padding: 10px;
@@ -61,6 +75,7 @@ div.paper {
   margin-top: 0.2em;
   transition: all 1s;
   box-shadow: 0 3px 2px rgba(52, 52, 52, 0.08);
+  width: 100%;
 }
 
 div.paper:hover {
@@ -214,7 +229,11 @@ section article {
 }
 
 section article.big {
-  flex: 2;
+  flex: 1.7;
+}
+
+section article h2 {
+  margin-bottom: 1em;
 }
 
 section article img {
