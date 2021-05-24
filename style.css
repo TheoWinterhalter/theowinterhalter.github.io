@@ -213,6 +213,10 @@ section article {
   text-align: justify;
 }
 
+section article.big {
+  flex: 2;
+}
+
 section article img {
   max-width: 250px;
   max-height: 100px;
