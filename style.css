@@ -232,7 +232,7 @@ section article {
   flex-direction: column;
   justify-content: space-around;
   flex-wrap: wrap;
-  flex: 1;
+  flex: 1 300px;
   align-items: center;
   margin: 20px;
   text-align: justify;
@@ -257,7 +257,7 @@ section div.column article div.content {
 }
 
 section article.big {
-  flex: 1.7;
+  flex: 1.7 300px;
 }
 
 section article h2 {
