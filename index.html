@@ -160,7 +160,19 @@
             <img src="res/reflection.png" alt="Reflection rule">
             <div class="content">
               <p class="main">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem officiis cumque itaque minus debitis sint aliquam similique. Illo, quidem obcaecati ipsum sunt adipisci nobis temporibus rerum? Eaque porro unde dignissimos.
+                Extensional type theory (ETT) is distinguished from regular
+                intensional type theory (ITT) in that it features the reflection
+                of equality rule. This rule states that any provable equality
+                can be considered as conversion.
+                This rule is really practical when formalising mathematics or
+                programming with dependent types. Its presence however makes
+                type-checking undecidable.
+                Following Martin Hofmann that showed that ETT was conservative
+                over ITT (meaning that any statement in ITT that is a theorem in
+                ETT is also a theorem in ITT). Ten years later, Nicolas Oury
+                furthered this result by proposing a translation from ETT to
+                ITT. We complete this work by providing an effective translation
+                (in the sense of a Coq program) with minimal axiom use.
               </p>
               <div class="paper">
                 <h4>
@@ -182,7 +194,14 @@
           <article>
             <div class="content">
               <p class="main">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem officiis cumque itaque minus debitis sint aliquam similique. Illo, quidem obcaecati ipsum sunt adipisci nobis temporibus rerum? Eaque porro unde dignissimos.
+                Simon Boulier and I noticed that the translation above did not
+                make any use of conversion in the target, ITT. As such we
+                proposed an extension of the conservativity result to
+                conservativity of ETT over weak type theory (WTT). WTT does not
+                feature any notion of conversion whatsoever. Instead all
+                computation rules are treated propositionally, as special
+                equality proofs. In particular, this shows that ITT is also
+                conservative over WTT.
               </p>
               <div class="files">
                 <a href="https://github.com/TheoWinterhalter/ett-to-wtt">Formalisation</a>
@@ -194,7 +213,11 @@
             <img src="res/metacoq-logo.png" alt="MetaCoq logo">
             <div class="content">
               <p class="main">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem officiis cumque itaque minus debitis sint aliquam similique. Illo, quidem obcaecati ipsum sunt adipisci nobis temporibus rerum? Eaque porro unde dignissimos.
+                Using the MetaCoq representation and specification of Coq
+                itself, we define a type-checker for Coq and prove it correct
+                and terminating, assuming strong normalisation of the theory.
+                This shifts the trusted base from the complex implementation to
+                the relatively simpler theory.
               </p>
               <div class="paper">
                 <h4>
@@ -220,7 +243,17 @@
           <article>
             <div class="content">
               <p class="main">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem officiis cumque itaque minus debitis sint aliquam similique. Illo, quidem obcaecati ipsum sunt adipisci nobis temporibus rerum? Eaque porro unde dignissimos.
+                Computation is very practical in dependent type theories to
+                automatically simplify expressions during type-checking.
+                Type theories do not always feature everything the user wants
+                and as such it is common for them to postulate extra principles
+                in the form of axioms. Those axioms however do not feature any
+                computational behaviour. To avoid having to rely on the
+                reflection rule, a middle ground can be to also postulate
+                computational behaviours for those axioms in the form of
+                rewrite rules. We propose an extension of MetaCoq with rewrite
+                rules, as well as a criterion that ensures we preserve
+                confluence and subject reduction.
               </p>
               <div class="paper">
                 <h4>
