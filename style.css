@@ -52,6 +52,10 @@ img {
   color: rgb(27, 161, 150);
 }
 
+.speaker {
+  text-decoration: underline;
+}
+
 span.submitted {
   border-radius: 0.1em;
   background: #ffae44;
@@ -191,7 +195,8 @@ section.dark {
 }
 
 section h1 {
-  color: rgb(43, 43, 43);
+  /* color: rgb(51, 69, 95); */
+  color: rgb(97, 146, 173);
   text-align: center;
 }
 
@@ -217,6 +222,11 @@ section div.main {
   align-items: baseline;
 }
 
+section div.main.column {
+  flex-direction: column;
+  align-items: center;
+}
+
 section article {
   display: flex;
   flex-direction: column;
@@ -226,6 +236,24 @@ section article {
   align-items: center;
   margin: 20px;
   text-align: justify;
+}
+
+section div.column article {
+  flex-direction: row;
+  margin: 0;
+}
+
+section div.column img {
+  /* flex: 1; */
+  margin: 10px;
+  max-height: min-content;
+  max-width: 200px;
+}
+
+section div.column article div.content {
+  flex: 3 300px;
+  margin: 10px;
+  margin-top: 40px;
 }
 
 section article.big {
@@ -246,6 +274,7 @@ p.main {
   font-size: x-large;
   margin-top: 0;
   margin-bottom: 0.3em;
+  text-align: justify;
 }
 
 section article a.full {
