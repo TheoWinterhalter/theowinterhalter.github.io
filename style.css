@@ -53,11 +53,20 @@ img {
 }
 
 div.paper {
-  background-color: rgb(231, 229, 229);
+  background-color: rgb(243, 240, 240);
   padding: 10px;
+  border: 1px solid rgb(206, 206, 206);
   border-radius: 5px;
   margin-bottom: 4px;
   margin-top: 0.2em;
+  transition: all 1s;
+  box-shadow: 0 3px 2px rgba(52, 52, 52, 0.08);
+}
+
+div.paper:hover {
+  box-shadow: 0 4px 3px rgba(32, 32, 32, 0.08);
+  border-color: rgb(166, 166, 166);
+  background-color: rgb(247, 247, 247);
 }
 
 div.paper p {
@@ -155,9 +164,15 @@ main {
 
 section {
   width: auto;
-  background: rgb(245,248,253);
-  background: linear-gradient(0deg, rgba(245,248,253,1) 0%, rgba(235,235,235,1) 100%);
   padding: 30px;
+}
+
+section.light {
+  background-color: #f3f3f3;
+}
+
+section.dark {
+  background-color: #f1eeee;
 }
 
 section h1 {
