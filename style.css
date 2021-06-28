@@ -77,6 +77,13 @@ span.upcoming {
   color: rgb(236, 236, 236);
 }
 
+span.distinguished {
+  border-radius: 0.1em;
+  background: #aeff44;
+  padding: 0.03em 0.3em;
+  color:rgb(101, 101, 101);
+}
+
 div.paper {
   background-color: rgb(243, 240, 240);
   padding: 10px;
